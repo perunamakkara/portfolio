@@ -9,9 +9,7 @@ body {
       "footer footer";
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto 1fr auto;
-    gap: 5px;
-    padding: 5px;
-    min-height: 97vh;
+    min-height: 100vh;
     margin: 0;
   }
   .container > div {
@@ -20,7 +18,6 @@ body {
   }
   .container > div.header {
     grid-area: header;
-    text-align: center;
     background-color: #DEB887;
     max-height: 50px;
   }
@@ -30,9 +27,7 @@ body {
   }
   .container > div.content {
     grid-area: content;
-    align-items: center;
-    justify-content: center;
-    img {
+    img:not(.disclude) {
         width: 200px;
         height: 200px;
     }
@@ -41,6 +36,7 @@ body {
     grid-area: footer;
     background-color: #DEB887;
     max-height: 50px;
+    text-align: center;
   }
 
 .container2 {
@@ -51,10 +47,7 @@ body {
       "footer footer";
       grid-template-columns: 1fr 3fr;
       grid-template-rows: auto 1fr auto;
-      gap: 5px;
-      padding: 5px;
-      min-height: 97vh;
-      margin: 0;
+      min-height: 100vh;
   }
   .container2 > div {
     padding: 10px;
@@ -62,7 +55,6 @@ body {
   }
   .container2 > div.header {
     grid-area: header;
-    text-align: center;
     background-color: #DEB887;
     max-height: 50px;               /*tämä toimii vaan tietokoneella. pienellä näytöllä siis navbar kusee*/
   }
@@ -72,13 +64,19 @@ body {
   }
   .container2 > div.content {
     grid-area: content;
-    align-items: center;
-    justify-content: center;
-  }
+    place-self: center;
+    /* laita pari prosenttia padding, kun mobiili */
+    padding-bottom: 32vh;
+        img:not(.disclude) {
+        width: auto;
+        height: 300px;
+    }
+    }
   .container2 > div.footer {
     grid-area: footer;
     background-color: #DEB887;
     max-height: 50px;           /*tämä toimii vaan tietokoneella. pienellä näytöllä siis navbar kusee*/
+    text-align: center;
   }
 
   ul {
@@ -100,6 +98,10 @@ li:hover::before {
 
 p, h1, h2, h3, h4, a, ul {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+}
+
+p {
+  font-size: 18px;
 }
 
 a {
