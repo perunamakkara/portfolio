@@ -6,44 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="icon" type="image/x-icon"
+        href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="container">
-            <div class="header">
-                <nav class="topnav">
+        <main class="container">
+            <header>
+                <nav class="topnav" id="myTopnav">
                     <a class="active" href="index.html">Home</a>
                     <a href="pages/about.html">About</a>
                     <a href="pages/skills.html">Skills</a>
                     <a href="pages/projects.html">Projects</a>
                     <a href="pages/contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </nav>
 
-            </div>
-            <div class="menu">
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myTopnav");
+                        if (x.className === "topnav") {
+                            x.className += " responsive";
+                        } else {
+                            x.className = "topnav";
+                        }
+                    }
+                </script>
+
+            </header>
+            <aside class="menu">
                 <ul>
                     <li><a href="pages/about.html"> About</a></li><br>
                     <li><a href="pages/skills.html"> Skills</a></li><br>
                     <li><a href="pages/projects.html"> Projects</a></li><br>
                     <li><a href="pages/contact.html"> Contact</a></li>
                 </ul>
-            </div>
-            <div class="content">
-                <img src="possuli.png">
+            </aside>
+            <section class="content">
+
+
+
+
+
+
+                <img class="naama" src="naama.jpg">
                 <h2>Runo Viitaniemi</h3>
                     <p>A software engineering student who enjoys creating webpages!</p>
-                    <img class="disclude"
+                    <img
                         src="https://web.archive.org/web/20090830021500/http://geocities.com/Heartland/Acres/2836/discwave.gif"
-                        width="120" height="110" style="position: absolute;
-                bottom: 70px; right: 10px;">
-            </div>
-            <div class="footer">
+                         style="position: absolute; bottom: 70px; right: 10px;  width: 120px; height:110px">
+            </section> 
+            <footer>
                 <h4>- Updated February 2025 -</h4>
 
-            </div>
-        </div>
+            </footer>
+        </main>
     </div>
 </body>
 

@@ -6,40 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My skills</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" type="image/x-icon" href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="icon" type="image/x-icon"
+        href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="container2">
-            <div class="header">
-                <nav class="topnav">
+        <main class="container2">
+            <header>
+                <nav class="topnav" id="myTopnav">
                     <a href="../index.html">Home</a>
                     <a href="about.html">About</a>
                     <a class="active" href="skills.html">Skills</a>
                     <a href="projects.html">Projects</a>
                     <a href="contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </nav>
-            </div>
-            <div class="content">
-                <h1>My skills</h1>
-                <p>I'm quite good at git(hub and console). I've gotten a brief introduction to react and using
-                    databases. <br>
-                    I code with Visual Studio and VScode.
-                </p>
-                <br>
-                <h3>Programming languages</h3>
-                <ul>
-                    <li><b> C#</b></li>
-                    <li><b> C++</b></li>
-                    <li><i> javascript</i></li>
-                    <li><i> typescript</i></li>
-                </ul>
-            </div>
-            <div class="footer">
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myTopnav");
+                        if (x.className === "topnav") {
+                            x.className += " responsive";
+                        } else {
+                            x.className = "topnav";
+                        }
+                    }
+                </script>
+            </header>
+            <section class="content">
+                <article>
+                    <h2>My skills</h2>
+                    <p>I'm quite good at git(hub and console). I've gotten a brief introduction to react and using
+                        databases. <br>
+                        I code with Visual Studio and VScode.
+                    </p>
+                </article><br>
+                <article>
+                    <h3>Programming languages</h3>
+                    <ul>
+                        <li><b> C#</b></li>
+                        <li><b> C++</b></li>
+                        <li><i> javascript</i></li>
+                        <li><i> typescript</i></li>
+                    </ul>
+                </article>
+            </section>
+            <footer>
                 <h4>- Updated February 2025 -</h4>
-            </div>
-        </div>
+            </footer>
+        </main>
     </div>
 </body>
 

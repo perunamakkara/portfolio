@@ -6,33 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact me</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" type="image/x-icon" href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="icon" type="image/x-icon"
+        href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="container2">
-            <div class="header">
-                <nav class="topnav">
+        <main class="container2">
+            <header>
+                <nav class="topnav" id="myTopnav">
                     <a href="../index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="skills.html">Skills</a>
                     <a href="projects.html">Projects</a>
                     <a class="active" href="contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </nav>
-            </div>
-            <div class="content" style="text-align: center;">
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myTopnav");
+                        if (x.className === "topnav") {
+                            x.className += " responsive";
+                        } else {
+                            x.className = "topnav";
+                        }
+                    }
+                </script>
+            </header>
+            <section class="content" style="text-align: center;">
                 <h2>You can contact me on LinkedIn and check out my public projects on github!</h2>
                 <hr style="border:none; border-top:3px dashed black"><br>
                 <a href="https://www.linkedin.com/in/runo-viitaniemi-098393248">> LinkedIn</a><br>
                 <a href="https://github.com/perunamakkara">> GitHub</a> <br>
                 <a href="https://drive.google.com/file/d/1Jdvl-3ZcL1BwewLyBxaicddIXsbbHp9K/view?usp=drive_link"
                     download>> Link to my resume</a>
-            </div>
-            <div class="footer">
+            </section>
+            <footer>
                 <h4>- Updated February 2025 -</h4>
-            </div>
-        </div>
+            </footer>
+        </main>
     </div>
 </body>
 

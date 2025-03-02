@@ -6,37 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" type="image/x-icon" href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="icon" type="image/x-icon"
+        href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="container2">
-            <div class="header">
-                <nav class="topnav">
+        <main class="container2">
+            <header>
+                <nav class="topnav" id="myTopnav">
                     <a href="../index.html">Home</a>
                     <a class="active" href="about.html">About</a>
                     <a href="skills.html">Skills</a>
                     <a href="projects.html">Projects</a>
                     <a href="contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </nav>
-            </div>
-            <div class="content">
-                <h1>About me</h1>
-                <p>I am a software engineering student at TAMK. Previously I studied at SASKY TPA and graduated as a
-                    software developer.<br>
-                    I'm trustworthy and punctual and always willing to improve! I enjoy learning new things and
-                    developing my own skills. <br>
-                </p><br>
-                <h3>My interests</h3>
-                <p> I enjoy making webpages with html and customizing them with css. I am actively learning javascript
-                    and everything about web developing.</p>
-
-            </div>
-            <div class="footer">
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myTopnav");
+                        if (x.className === "topnav") {
+                            x.className += " responsive";
+                        } else {
+                            x.className = "topnav";
+                        }
+                    }
+                </script>
+            </header>
+            <section class="content">
+                <article>
+                    <h2>About me</h2>
+                    <p>I am a software engineering student at TAMK. Previously I studied at SASKY TPA and graduated as a
+                        software developer.<br>
+                        I'm trustworthy and punctual and always willing to improve! I enjoy learning new things and
+                        developing my own skills. <br>
+                    </p>
+                </article><br>
+                <article>
+                    <h3>My interests</h3>
+                    <p> I enjoy making webpages with html and customizing them with css. I am actively learning
+                        javascript
+                        and everything about web developing.</p>
+                </article>
+            </section>
+            <footer>
                 <h4>- Updated February 2025 -</h4>
-            </div>
-        </div>
+            </footer>
+        </main>
     </div>
 </body>
 

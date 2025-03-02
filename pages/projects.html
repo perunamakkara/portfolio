@@ -6,59 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="icon" type="image/x-icon" href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="icon" type="image/x-icon"
+        href="https://web.archive.org/web/20090801181822/http://hk.geocities.com/lemonwork/face/star.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="container2">
-            <div class="header">
-                <nav class="topnav">
+        <main class="container2">
+            <header>
+                <nav class="topnav" id="myTopnav">
                     <a href="../index.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="skills.html">Skills</a>
                     <a class="active" href="projects.html">Projects</a>
                     <a href="contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </nav>
-            </div>
-            <div class="content">
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myTopnav");
+                        if (x.className === "topnav") {
+                            x.className += " responsive";
+                        } else {
+                            x.className = "topnav";
+                        }
+                    }
+                </script>
+
+            </header>
+            <section class="content">
                 <br>
                 <h1>My projects</h1>
                 <hr style="border:none; border-top:3px dashed black"><br>
-                <h2>Hotel project</h2>
-                <p>This is a hotel reservation program that I made as a school project. It was made in C++ and runs in
-                    console.</p>
-                <img class="disclude" src="../hotelli.png" width="auto" ; height="500px">
-                <ul>
-                    <li>
+                <article>
+                    <h2>Hotel project</h2>
+                    <p>This is a hotel reservation program that I made as a school project. It was made in C++ and runs
+                        in
+                        console.</p>
 
-                        <a href="https://gitlab.tamk.cloud/perunamakkara/hotelli-ohjelma">Link to gitlab</a>
-                    </li>
-                </ul><br>
-                <h2>Cat page</h2>
-                <p>This is also a school project. It's my first webpage. It's purpose was to showcase different
-                    attributes of html</p>
-                <div style="text-align: center;">
-                    <img style="border: 1px solid black;" src="../catpage.png"><br>
-                    <img style="border: 1px solid black;" src="../catpage2.png">
-                </div><br>
-                <h2>This webpage!</h2>
-                <p>You are currently looking at this project.</p>
-                <ul>
-                    <li>
-                        <a href="https://github.com/perunamakkara/portfolio">Link to github</a>
-                    </li>
-                </ul><br>
+                    <figure>
+                        <img src="../hotelli.png" class="hotelli">
+                    </figure>
+                    <ul>
+                        <li>
+                            <a style="text-align: center;"
+                                href="https://gitlab.tamk.cloud/perunamakkara/hotelli-ohjelma">Link to gitlab</a>
+                        </li>
+                    </ul>
+                </article><br>
+                <article>
+                    <h2>Cat page</h2>
+                    <p>This is also a school project. It's my first webpage. It's purpose was to showcase different
+                        attributes of html</p>
+                    <figure style="text-align: center;">
+                        <img style="border: 1px solid black;" class="cat" src="../catpage.png"><br>
+                        <img style="border: 1px solid black;" class="cat" src="../catpage2.png">
+                    </figure><br>
+                </article>
+                <article>
+                    <h2>This webpage!</h2>
+                    <p>You are currently looking at this project.</p>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/perunamakkara/portfolio">Link to github</a>
+                        </li>
+                    </ul>
+                </article><br>
                 <hr style="border:none; border-top:3px dashed black"><br>
-                <div style="text-align: center;">
-                    <img class="disclude"
+                <figure style="text-align: center;">
+                    <img class="construction"
                         src="https://web.archive.org/web/20090822002706/http://geocities.com/Tokyo/Island/4174/underconstruction.gif">
-                </div>
-            </div>
-            <div class="footer">
+                </figure>
+            </section>
+            <footer>
                 <h4>- Updated February 2025 -</h4>
-            </div>
-        </div>
+            </footer>
+        </main>
     </div>
 </body>
 
